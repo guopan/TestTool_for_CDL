@@ -1,0 +1,23 @@
+Knapsack Coherent Doppler Lidar Vector Velocity Table				#标题
+=======================================================================================================
+Version:1.0															#数据格式版本	
+Global Definition:#全局参数定义
+
+Base Time: 1900-01-01 00:00:00										#系统基准事件，以字符串存储，精确到秒
+Time Stamp Size: 8 Bytes float										#时间戳存储形式，矢量风速对应的生成时间戳
+
+Height Axis: 100.00 200.00 300.00 400.00 ...						#字符串形式保存高度坐标轴各点高度，精确到小数点后两位，单位是m
+Velocity Point Size: 8 Bytes float									#速度分量存储形式
+=======================================================================================================
+Velocity Data(TimeStamp VelocityZAxis VelocityXAxis VelocityYAxis)	#二进制存储，分别为时间戳、垂直风速、水平风速X分量、水平风速Y分量
+float64 float64 float64 float64 ......
+float64 float64 float64 float64 ......
+float64 float64 float64 float64 ......
+float64 float64 float64 float64 ......
+...
+...
+...
+
+#附加说明：
+#激光雷达的工作方式为开始采集后工作一段时间（通常为3分钟），这段时间内产生的矢量风速全部存储于本文件
+#因此文件拓展名.velo代表存储矢量风速数据，文件名需要存储本次采集的开始时间
