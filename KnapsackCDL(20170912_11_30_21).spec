@@ -1,6 +1,6 @@
-Version:1.0															#数据格式版本		
 Knapsack Coherent Doppler Lidar Original Spectrum					#标题
 =======================================================================================================
+Version: 1.0															#数据格式版本		
 Global Definition:													#全局参数定义
 
 ....各种设置
